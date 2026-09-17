@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSecure - Área Restrita</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="login-container" style="text-align: center;">
+        <h2 style="color: var(--neon-green); border: none; margin-bottom: 20px;">ACESSO CONCEDIDO</h2>
+        <p>Bem-vindo ao painel interno, <strong style="color: white; font-size: 1.2em;">{{ username }}</strong>.</p>
+        
+        <div class="highlight-box" style="margin: 30px 0; text-align: left;">
+            <p><strong>Status:</strong> Autenticado com sucesso.</p>
+            <p><strong>Nível de Acesso:</strong> Administrador/Laboratório.</p>
+        </div>
+        
+        <a href="/" class="btn-3d">SAIR DO SISTEMA</a>
+    </div>
+</body>
+</html>

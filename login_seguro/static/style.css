@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    --bg-black: #050505;
+    --text-main: #f3f4f6;
+    --neon-green: #00ff66;
+    --error-red: #ff3333;
+    --border-color: #2a2a2a;
+}
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--text-main);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Fundo Matrix escuro */
+    background-color: var(--bg-black);
+    background-image: 
+        linear-gradient(rgba(5, 5, 5, 0.90), rgba(17, 17, 17, 0.95)), 
+        url('https://i.pinimg.com/originals/20/6c/e5/206ce59b02a9eb73d6118d098e9a2638.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-container {
+    background-color: rgba(17, 17, 17, 0.85);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: var(--text-main);
+    letter-spacing: 2px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.1em;
+    color: var(--neon-green);
+    margin: 0 0 30px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.erro-msg {
+    background-color: rgba(255, 51, 51, 0.1);
+    color: var(--error-red);
+    border-left: 4px solid var(--error-red);
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--neon-green);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+}
+
+.highlight-box {
+    background-color: rgba(0, 255, 102, 0.08);
+    border: 1px solid rgba(0, 255, 102, 0.3);
+    border-left: 4px solid var(--neon-green);
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* --- BOTÃO 3D RETRÔ --- */
+.btn-3d {
+  width: 100%;
+  font-size: 18px;
+  background-color: #008542;
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: bold;
+  box-sizing: border-box;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+.btn-3d:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  background-color: #008542 !important;
+  box-shadow: 0 -4px rgb(21 108 0 / 50%) inset,
+    0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset,
+    4px 0 rgb(21 108 0 / 50%) inset;
+}
+
+.btn-3d:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+.btn-3d:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.btn-3d:hover:after {
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+
+.btn-3d:active {
+  transform: translateY(4px);
+}
+
+.btn-3d:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
